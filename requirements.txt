@@ -1,0 +1,6 @@
+numpy
+requests
+openai
+docling
+faster-whisper
+pypdf
