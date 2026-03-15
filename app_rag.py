@@ -204,7 +204,7 @@ Règles :
 - Si l’information n’est pas dans les extraits, dis :
   "Je ne le vois pas dans les extraits fournis."
 - Réponse claire, structurée.
-- Ajoute des citations [1], [2].
+- Ajoute des citations au format [1], [2].
 
 Question : {question}
 
@@ -374,7 +374,7 @@ with tab1:
             st.session_state.pivot_text = md
 
             st.success("PDF analysé — TEXTE pivot prêt")
-            st.text_area("Markdown extrait", md[:8000], height=250)
+            st.text_area("Markdown extrait", md, height=250)
 
             c1, c2, c3 = st.columns(3)
             with c1:

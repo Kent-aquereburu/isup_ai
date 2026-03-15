@@ -1,6 +1,13 @@
 numpy
-requests
-openai
+scikit-learn
+matplotlib
+seaborn
 docling
 faster-whisper
 pypdf
+sentence_transformers
+requests
+openai
+matplotlib
+huggingface-hub==0.34.0
+streamlit

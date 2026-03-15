@@ -4,5 +4,10 @@
 .venv
 env/
 venv/
-.streamlit
+.streamlit/
 .toml
+models/
+
+
+models/
+.env
