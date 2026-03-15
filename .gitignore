@@ -7,4 +7,5 @@ venv/
 .streamlit/
 .toml
 models/
-
+*.egg-info/
+dist/
