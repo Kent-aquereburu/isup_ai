@@ -4,4 +4,4 @@ version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.11"
-dependencies = ["numpy","requests","openai","docling","faster-whisper","pypdf"]
+dependencies = ["numpy","requests","openai","docling","faster-whisper","pypdf", "streamlit", "pdf2image", "ruff", "pytesseract"]
