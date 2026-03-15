@@ -9,5 +9,7 @@ sentence_transformers
 requests
 openai
 matplotlib
+#Hugging face connection to download embedding models
 huggingface-hub==0.34.0
 streamlit
+
