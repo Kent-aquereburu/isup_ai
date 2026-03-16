@@ -99,7 +99,12 @@ uv pip install -e .
 
 ## Déroulé de l'atelier
 
-Une fois la configuration réalisée, l'atelier se déroule de la façon suivante : 
-- Démarrer l'app streamlit avec ``uv run streamlit run app_rag.py``
-- Uploader ``docs_exemples\Auto_CG_SGRF_DOM_SOGESSUR_DocCliCont.pdf`` > ``Analyser avec Docling``
-- Attendre :)
+
+
+### Introduction théorique
+
+- [Slides rappel sur les RAG](isup_ai/support presentation.pptx)
+- [Démo streamlit] : 
+    - Démarrer l'app streamlit avec ``uv run streamlit run app_rag.py``
+    - Uploader ``docs_exemples\Auto_CG_SGRF_DOM_SOGESSUR_DocCliCont.pdf`` > ``Analyser avec Docling``
+    - Attendre :)
