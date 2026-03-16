@@ -80,7 +80,7 @@ Ollama peut être installé sur macOS avec :
 
 brew install ollama
 
-ou aller sur 
+ou aller sur
 
 https://ollama.com/download
 
@@ -110,3 +110,8 @@ uv pip install -e .
 ### Notebook
 
 Tutoriel : Clusteriser des verbatims et interpréter avec des LLMs
+
+### Pour aller plus loin
+
+- [Hidden Technical Debt in Machine Learning Systems](https://proceedings.neurips.cc/paper_files/paper/2015/file/86df7dcfd896fcaf2674f757a2463eba-Paper.pdf), un papier historique de Google sur la gestion du machine learning en production qui est encore très pertinent à l'heure de l'IA générative
+- [WFGY](https://github.com/onestardao/WFGY/blob/main/ProblemMap/README.md#legend), un repo qui explique les différents problèmes que l'on peut rencontrer avec un RAG en production
