@@ -337,8 +337,6 @@ else:
 
 
 
-
-
 st.sidebar.header("RAG")
 top_k = st.sidebar.slider("Top-K", 2, 8, 4)
 chunk_size = st.sidebar.slider("Chunk size", 500, 1400, 900)
