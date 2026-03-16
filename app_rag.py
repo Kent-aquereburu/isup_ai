@@ -6,7 +6,7 @@
 #  - Backends : Ollama (local) OU OpenAI (cloud)
 #
 # Lancer :
-#   streamlit run app_rag_docling_audio_fr.py
+#   streamlit run app_rag.py
 # .  put your open ai key in .streamlit/secrets.toml file : OPENAI_API_KEY="sk-xxxx"
 
 # ==========================================================
@@ -134,7 +134,7 @@ def render_gallery(title: str, images, cols: int = 3):
     grid = st.columns(cols)
     for i, img in enumerate(images):
         with grid[i % cols]:
-            st.image(img, width="stretch")
+            st.image(img, use_container_width=True)
 
 
 # ==========================================================
@@ -221,20 +221,24 @@ def docling_convert(pdf_bytes: bytes):
     pipeline.images_scale = 2.0
     pipeline.generate_page_images = True
     pipeline.generate_picture_images = True
-
+    print("Creating DocumentConverter with Docling...")
     converter = DocumentConverter(
         format_options={InputFormat.PDF: PdfFormatOption(pipeline_options=pipeline)}
     )
+    print("after converter...")
 
     with tempfile.TemporaryDirectory() as td:
         path = f"{td}/doc.pdf"
         with open(path, "wb") as f:
             f.write(pdf_bytes)
 
+        print("before convertsion...")
         conv = converter.convert(path)
+        print("after convertsion...")
         doc = conv.document
 
         md = doc.export_to_markdown()
+        print("after export...")
 
         pages, tables, pictures = [], [], []
         for _, page in doc.pages.items():
@@ -351,11 +355,6 @@ if mode == "Ollama (local)":
 else:
     llm_model = st.sidebar.text_input("LLM", "gpt-4.1-mini")
     emb_model = st.sidebar.text_input("Embeddings", "text-embedding-3-small")
-<<<<<<< HEAD
-    
-
-=======
->>>>>>> 0685f3f (update documentation)
 
 
 st.sidebar.header("RAG")
@@ -386,7 +385,9 @@ with tab1:
     pdf = st.file_uploader("Charge un PDF", type=["pdf"])
     if pdf and DOCLING_OK:
         if st.button("Analyser avec Docling"):
+            print("before docling convert")
             md, pages, tables, pics = docling_convert(pdf.read())
+            print("after docling convert")
             st.session_state.pivot_text = md
 
             st.success("PDF analysé — TEXTE pivot prêt")

@@ -106,3 +106,7 @@ uv pip install -e .
     - Démarrer l'app streamlit avec ``uv run streamlit run app_rag.py``
     - Uploader ``docs_exemples\Auto_CG_SGRF_DOM_SOGESSUR_DocCliCont.pdf`` > ``Analyser avec Docling``
     - Attendre :)
+
+### Notebook
+
+Tutoriel : Clusteriser des verbatims et interpréter avec des LLMs
