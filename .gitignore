@@ -7,7 +7,4 @@ venv/
 .streamlit/
 .toml
 models/
-
-
-models/
 .env
