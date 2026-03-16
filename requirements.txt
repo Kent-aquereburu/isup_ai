@@ -3,15 +3,26 @@ scikit-learn
 matplotlib
 seaborn
 
+#streamlit pr l'interface
+streamlit
+
+#dotenv pr les charger les cles secretes api
+python-dotenv
+
 docling
 faster-whisper
+
+#Pour lire des pdfs natifs ou OCR (tesseract)
 pypdf
+pdf2image
+pytesseract
+
 sentence_transformers
+
+#pour les appels d'api openai
 requests
 openai
-matplotlib
 #Hugging face connection to download embedding models
 huggingface-hub==0.34.0
-streamlit
-python-dotenv
+
 

@@ -7,7 +7,7 @@
 #  - Backends : Ollama (local) OU OpenAI (cloud)
 #
 # Lancer :
-#   streamlit run app_rag_docling_audio_fr.py
+#   streamlit run app_rag.py
 #.  put your open ai key in .streamlit/secrets.toml file : OPENAI_API_KEY="sk-xxxx"
 
 # ==========================================================
@@ -333,7 +333,7 @@ if mode == "Ollama (local)":
 else:
     llm_model = st.sidebar.text_input("LLM", "gpt-4.1-mini")
     emb_model = st.sidebar.text_input("Embeddings", "text-embedding-3-small")
-    st.sidebar.text("STT : gpt-4o-mini-transcribe")
+    
 
 
 
@@ -415,7 +415,7 @@ with tab3:
     st.subheader("RAG : recherche sémantique + LLM")
     question = st.text_area(
         "Question",
-        "Quels sont les principales garanties du contrat auto ?",
+        "1/ Quels sont les principales garanties du contrat auto ? 2/Est ce que la formule tiers plus garantit le bris de glace ?",
     )
 
     if st.session_state.pivot_text:
