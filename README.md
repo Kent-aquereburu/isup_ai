@@ -99,8 +99,6 @@ uv pip install -e .
 
 ## Déroulé de l'atelier
 
-
-
 ### Introduction théorique
 
 - [Slides rappel sur les RAG](isup_ai/support presentation.pptx)
